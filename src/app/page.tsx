@@ -1,6 +1,8 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Card from './components/card';
+import Divider from './components/divider';
 
 export default function Home() {
   const [heroThumbnailPos, setHeroThumbnailPos] = useState(1);
@@ -69,6 +71,31 @@ export default function Home() {
           <div className="h-full bg-cyan-400" style={{ background: 'rgb(70 202 233)', width: `${heroThumbnailPos / heroThumbnailCombination.length * 100}%` }} />
         </div>
       </section>
+      <Divider />
+      <section className="bg-white flex flex-col w-full px-20">
+        <div className="relative flex items-center justify-start -tracking-[-1em]">
+          <span className="text-border-gradient bg-gradient-to-r from-[#0866B0] to-[#46CAE9] text-[300px] font-logo">TORNEIOS</span>
+          <h2 className="z-10 absolute text-gradient bg-gradient-to-r from-[#0866B0] to-[#46CAE9] text-[96px] font-logo -tracking-[-.05em]">MELHORES TORNEIOS</h2>
+        </div>
+        <div className="grid grid-cols-3 gap-5 h-full">
+          <Card
+            imagePath="/images/Blob-3.png"
+            title="campeonato da vitória"
+            occurrenceLabel="domingos"
+          />
+          <Card
+            imagePath="/images/Blob.png"
+            title="construção zero"
+            occurrenceLabel="segundas-feiras"
+          />
+          <Card
+            imagePath="/images/Blob-1.png"
+            title="campeonato por grana"
+            occurrenceLabel="várias datas"
+          />
+        </div>
+      </section>
+      <Divider />
     </main>
   )
 }
