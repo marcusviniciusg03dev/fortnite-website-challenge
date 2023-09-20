@@ -25,3 +25,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@font-face {
+  font-family: "Burbank Big Condensed Bold";
+  src: url('/fonts/Burbank-Big-Condensed-Bold-Font.otf');
+}
+
+@layer base {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

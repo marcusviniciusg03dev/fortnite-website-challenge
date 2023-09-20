@@ -1,4 +1,7 @@
 import type { Config } from 'tailwindcss'
+import forms from '@tailwindcss/forms'
+import aspectRatio from '@tailwindcss/aspect-ratio'
+import typography from '@tailwindcss/typography'
 
 const config: Config = {
   content: [
@@ -8,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        logo: ['Burbank Big Condensed Bold']
+      },
       spacing: {
         '1': '4px',
         '2': '8px',
@@ -25,11 +31,6 @@ const config: Config = {
         '32': '128px',
         '40': '160px',
         '48': '192px',
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
         blue: {
@@ -60,6 +61,10 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    forms,
+    aspectRatio,
+    typography,
+  ],
 }
 export default config
