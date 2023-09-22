@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Card from './components/card';
 import Divider from './components/divider';
+import FeaturedSection from './components/featured-section';
+import CoinCard from './components/coin-card';
 
 export default function Home() {
   const [heroThumbnailPos, setHeroThumbnailPos] = useState(1);
@@ -38,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center min-h-screen">
+    <main className="flex flex-col items-center min-h-screen overflow-x-hidden">
       <section className={`relative overflow-hidden p-14 w-full h-[100vh] flex gap-8 bg-no-repeat bg-cover`} style={{ backgroundImage: `url("/images/${heroThumbnailCombination[heroThumbnailPos - 1].hero}")` }}>
         <div className="z-20 bg-transparent flex flex-col items-start justify-end gap-5">
           <Image alt="platforms" src="/platforms.svg" width={163} height={30} />
@@ -72,11 +74,7 @@ export default function Home() {
         </div>
       </section>
       <Divider />
-      <section className="bg-white flex flex-col w-full px-20">
-        <div className="relative flex items-center justify-start -tracking-[-1em]">
-          <span className="text-border-gradient bg-gradient-to-r from-[#0866B0] to-[#46CAE9] text-[300px] font-logo">TORNEIOS</span>
-          <h2 className="z-10 absolute text-gradient bg-gradient-to-r from-[#0866B0] to-[#46CAE9] text-[96px] font-logo -tracking-[-.05em]">MELHORES TORNEIOS</h2>
-        </div>
+      <FeaturedSection featuredTitle="Melhores torneios" bgTitle="Torneios">
         <div className="grid grid-cols-3 gap-5 h-full">
           <Card
             imagePath="/images/Blob-3.png"
@@ -94,7 +92,41 @@ export default function Home() {
             occurrenceLabel="várias datas"
           />
         </div>
+      </FeaturedSection>
+      <Divider />
+      <section className="relative bg-battle-pass bg-cover h-[578px] w-full grid grid-cols-2">
+        <div
+          className="absolute rotate-45 bg-white w-[97px] h-[157px] left-[-31px] top-[-60px]"
+        />
+        <div
+          className="absolute rotate-45 bg-white w-[97px] h-[157px] right-[-31px] bottom-[-60px]"
+        />
+        <span className="flex items-center p-10">
+          <Image src="/passe.svg" alt="Battle pass emblem" width={194} height={136} />
+          <span className="flex flex-col items-start gap-5">
+            <h3 className="uppercase text-4xl font-logo">Passe de batalha</h3>
+            <p className="text-xl">Suba de nível e resgate recompensas! Procurando o Pacotão de Batalha? Adicione 25 níveis ao seu Passe de Batalha a qualquer momento!</p>
+            <button className="font-logo text-4xl px-14 py-2 bg-[#F5E401] bg-button-vector bg-contain bg-no-repeat">
+              <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Comprar passe</span>
+            </button>
+          </span>
+        </span>
+        <span className="flex relative items-end justify-end h-full">
+          <div className="bottom-0 flex items-end justify-center justify-self-end">
+            <Image src="/images/Blob-4.png" alt="blob" width={336} height={417} className=" mr-[400px]" />
+            <Image src="/images/Blob-5.png" alt="blob" width={610} height={693} className="absolute" />
+          </div>
+        </span>
       </section>
+      <Divider />
+      <FeaturedSection bgTitle="Créditos" featuredTitle="V-bucks">
+        <div className="grid grid-cols-4 gap-5 h-full">
+          <CoinCard imageUrl="/images/image 9.png" price={24.90} quantity={1000} featured />
+          <CoinCard imageUrl="/images/image 10.png" price={62.50} quantity={2800} />
+          <CoinCard imageUrl="/images/image 11.png" price={97.50} quantity={5000} />
+          <CoinCard imageUrl="/images/image 12.png" price={246} quantity={13500} bonus={37} />
+        </div>
+      </FeaturedSection>
       <Divider />
     </main>
   )

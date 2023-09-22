@@ -58,6 +58,10 @@ const config: Config = {
         },
         white: '#FFFFFF',
         black: '#000000',
+      },
+      backgroundImage: {
+        'battle-pass': 'url("/passe-background.svg")',
+        'bonus-bg': 'url("/Rectangle 1135.svg")'
       }
     },
   },

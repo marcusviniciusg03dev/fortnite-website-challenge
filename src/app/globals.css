@@ -39,6 +39,6 @@ body {
   }
   .text-border-gradient {
     -webkit-background-clip: text;
-    -webkit-text-stroke: .2rem transparent;
+    -webkit-text-stroke: .1rem transparent;
   }
 }
