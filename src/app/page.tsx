@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       </FeaturedSection>
       <Divider />
-      <section className="relative bg-battle-pass bg-cover h-[578px] w-full grid grid-cols-2">
+      <section className="relative bg-gradient-radial from-[#46CAE9] to-[#0866B0] bg-cover h-[578px] w-full grid grid-cols-2">
         <div
           className="absolute rotate-45 bg-white w-[97px] h-[157px] left-[-31px] top-[-60px]"
         />
