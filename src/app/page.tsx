@@ -73,7 +73,7 @@ export default function Home() {
           className="z-10 absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-[#090D15] to-[#090D1528]"
         />
         <div className="absolute z-30 bottom-0 left-0 right-0 w-full h-0.5 bg-transparent">
-          <div className="h-full bg-cyan-400" style={{ background: 'rgb(70 202 233)', width: `${heroThumbnailPos / heroThumbnailCombination.length * 100}%` }} />
+          <div className="h-full bg-cyan-400 transition-all duration-500" style={{ background: 'rgb(70 202 233)', width: `${heroThumbnailPos / heroThumbnailCombination.length * 100}%` }} />
         </div>
       </section>
       <Divider />
