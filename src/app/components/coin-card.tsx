@@ -28,7 +28,7 @@ export default function CoinCard({ imageUrl, quantity, price, bonus, featured }:
                     <h5>V-bucks</h5>
                 </div>
             </div>
-            <div className={`relative p-4 bg-yellow-400 ${featured ? 'bg-gray-100' : ''} text-gray-800 text-center transition-all`}>
+            <div className={`relative p-4 ${featured ? 'bg-gray-100' : 'bg-yellow-400'} text-gray-800 text-center transition-all`}>
                 <Image
                     src="/Rectangle 1133.svg"
                     alt="vector"

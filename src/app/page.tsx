@@ -5,6 +5,7 @@ import Card from './components/card';
 import Divider from './components/divider';
 import FeaturedSection from './components/featured-section';
 import CoinCard from './components/coin-card';
+import SkinCard from './components/skin-card';
 
 export default function Home() {
   const [heroThumbnailPos, setHeroThumbnailPos] = useState(1);
@@ -128,6 +129,14 @@ export default function Home() {
         </div>
       </FeaturedSection>
       <Divider />
+      <FeaturedSection bgTitle="Itens" featuredTitle="Adquira skins">
+        <div className="grid grid-cols-4 h-full">
+          <SkinCard title="Duende verde" imageUrl="/images/Blob-2.png" />
+          <SkinCard title="Kratos" imageUrl="/images/image 19.png" />
+          <SkinCard title="Desbravador praiano" imageUrl="/images/Blob-6.png" />
+          <SkinCard title="Homem-aranha" imageUrl="/images/image 13.png" />
+        </div>
+      </FeaturedSection>
     </main>
   )
 }
