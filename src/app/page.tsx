@@ -137,6 +137,17 @@ export default function Home() {
           <SkinCard title="Homem-aranha" imageUrl="/images/image 13.png" />
         </div>
       </FeaturedSection>
+      <Divider />
+      <section className="flex w-full h-[560px]">
+        <span className="flex flex-col items-start justify-center bg-gradient-radial from-[#46CAE9] to-[#0866B0] h-full w-full p-16 gap-5">
+          <h2 className="text-6xl font-logo uppercase">Com amigos ou sozinho</h2>
+          <p className="text-2xl">Em qualquer modalidade a aventura é garantida, você pode jogar para se divertir ou para ganhar recompensas em torneios.</p>
+          <button className="font-logo text-4xl px-10 py-1 bg-[#F5E401] bg-button-vector bg-contain bg-no-repeat ]">
+            <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Jogue agora</span>
+          </button>
+        </span>
+        <img src="/images/image 20.png" alt="" className="w-[693px]" />
+      </section>
     </main>
   )
 }

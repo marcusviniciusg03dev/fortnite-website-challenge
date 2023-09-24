@@ -61,7 +61,8 @@ const config: Config = {
       },
       backgroundImage: {
         'battle-pass': 'url("/passe-background.svg")',
-        'bonus-bg': 'url("/Rectangle 1135.svg")'
+        'bonus-bg': 'url("/Rectangle 1135.svg")',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     },
   },
