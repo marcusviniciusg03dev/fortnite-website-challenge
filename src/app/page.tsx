@@ -7,6 +7,8 @@ import FeaturedSection from './components/featured-section';
 import CoinCard from './components/coin-card';
 import SkinCard from './components/skin-card';
 
+import { FaFacebookSquare, FaTwitter, FaYoutube } from 'react-icons/fa';
+
 export default function Home() {
   const [heroThumbnailPos, setHeroThumbnailPos] = useState(1);
 
@@ -148,6 +150,25 @@ export default function Home() {
         </span>
         <img src="/images/image 20.png" alt="" className="w-[693px]" />
       </section>
+      <footer className="flex flex-col bg-white w-full p-16 text-grey-700 gap-10">
+        <div className="flex justify-between">
+          <img src="/epic.svg" alt="Epic Games" />
+          <div className="flex items-center gap-5">
+            <span className="text-grey-700">Acompanhe nas redes</span>
+            <FaFacebookSquare className="text-grey-400" size={24} />
+            <FaTwitter className="text-grey-400" size={24} />
+            <FaYoutube className="text-grey-400" size={24} />
+          </div>
+        </div>
+        <div className="flex flex-col justify-between">
+          <p className="w-[60%] text-grey-700">Partes dos materiais utilizados são marcas registradas e/ou obras protegidas por direitos autorais da Epic Games, Inc. Todos os direitos reservados pela <b>Epic</b>. Este material <b>não é oficial</b> e não é endossado pela Epic.</p>
+          <hr className="my-5" />
+          <div className="flex justify-center items-center gap-2">
+            <span className="text-md">Desafio Fortnite por <a href="https://www.explow.studio" className="underline underline-offset-4 font-bold">Explow Studio</a></span>
+            <span className="text-md">Desenvolvido por <a href="https://github.com/marcusviniciusg03dev" className="underline underline-offset-4 font-bold">Marcus Vinicius Gomes</a></span>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
