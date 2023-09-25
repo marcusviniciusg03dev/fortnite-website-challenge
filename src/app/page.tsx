@@ -1,13 +1,13 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Card from './components/card';
 import Divider from './components/divider';
 import FeaturedSection from './components/featured-section';
 import CoinCard from './components/coin-card';
 import SkinCard from './components/skin-card';
 
 import { FaFacebookSquare, FaTwitter, FaYoutube } from 'react-icons/fa';
+import TournamentCard from './components/tournament-card';
 
 export default function Home() {
   const [heroThumbnailPos, setHeroThumbnailPos] = useState(1);
@@ -79,17 +79,17 @@ export default function Home() {
       <Divider />
       <FeaturedSection featuredTitle="Melhores torneios" bgTitle="Torneios">
         <div className="grid grid-cols-3 gap-5 h-full">
-          <Card
+          <TournamentCard
             imagePath="/images/Blob-3.png"
             title="campeonato da vitória"
             occurrenceLabel="domingos"
           />
-          <Card
+          <TournamentCard
             imagePath="/images/Blob.png"
             title="construção zero"
             occurrenceLabel="segundas-feiras"
           />
-          <Card
+          <TournamentCard
             imagePath="/images/Blob-1.png"
             title="campeonato por grana"
             occurrenceLabel="várias datas"

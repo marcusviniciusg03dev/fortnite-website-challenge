@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-interface CardProps {
+interface TournamentCardProps {
     title: string
     imagePath: string
     occurrenceLabel: string
 }
 
-export default function Card({ title, imagePath, occurrenceLabel }: CardProps) {
+export default function TournamentCard({ title, imagePath, occurrenceLabel }: TournamentCardProps) {
     return (
         <span className="flex relative items-end justify-center h-[586px]">
             <span className="z-20 absolute w-full h-[50%] bg-gradient-to-t from-[#090D15] to-[#090D1500]" />
