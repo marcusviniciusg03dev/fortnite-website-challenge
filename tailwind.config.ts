@@ -61,7 +61,15 @@ const config: Config = {
       },
       backgroundImage: {
         'bonus-bg': 'url("/Rectangle 1135.svg")',
+        'button-hover-bg': 'url("/Rectangle 1147.svg")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '95%': '95%',
+        '16': '4rem',
       }
     },
   },

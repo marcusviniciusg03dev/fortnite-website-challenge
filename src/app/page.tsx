@@ -55,7 +55,7 @@ export default function Home() {
               height={145}
             />
           <p className="w-[80%] text-lg">Chame seus amigos e mergulhe em um jogo massivo de combate que combina saque, criação, tiroteio e caos. O resultado é uma experiência online competitiva e totalmente imprevisível que só fica maior e mais radical a cada temporada.</p>
-          <button className="font-logo text-4xl px-10 py-1 bg-[#F5E401] bg-button-vector bg-contain bg-no-repeat ]">
+          <button className="font-logo text-4xl px-10 py-1 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 hover:scale-110 transition-all">
             <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Jogue agora</span>
           </button>
         </div>
@@ -109,7 +109,7 @@ export default function Home() {
           <span className="flex flex-col items-start gap-5">
             <h3 className="uppercase text-4xl font-logo">Passe de batalha</h3>
             <p className="text-xl">Suba de nível e resgate recompensas! Procurando o Pacotão de Batalha? Adicione 25 níveis ao seu Passe de Batalha a qualquer momento!</p>
-            <button className="font-logo text-4xl px-14 py-2 bg-[#F5E401] bg-button-vector bg-contain bg-no-repeat">
+            <button className="font-logo text-4xl px-14 py-2 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 hover:scale-110 transition-all">
               <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Comprar passe</span>
             </button>
           </span>
@@ -144,7 +144,7 @@ export default function Home() {
         <span className="flex flex-col items-start justify-center bg-gradient-radial from-[#46CAE9] to-[#0866B0] h-full w-full p-16 gap-5">
           <h2 className="text-6xl font-logo uppercase">Com amigos ou sozinho</h2>
           <p className="text-2xl">Em qualquer modalidade a aventura é garantida, você pode jogar para se divertir ou para ganhar recompensas em torneios.</p>
-          <button className="font-logo text-4xl px-10 py-1 bg-[#F5E401] bg-button-vector bg-contain bg-no-repeat ]">
+          <button className="font-logo text-4xl px-10 py-1 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 hover:scale-110 transition-all">
             <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Jogue agora</span>
           </button>
         </span>

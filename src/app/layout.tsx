@@ -35,7 +35,7 @@ export default function RootLayout({
             <a>Itens</a>
           </nav>
           <span>
-            <button className="font-logo text-4xl px-10 py-1 bg-yellow-400">
+            <button className="font-logo text-4xl px-10 py-1 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 transition-all">
               <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Conheça</span>
             </button>
           </span>
