@@ -44,7 +44,12 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center min-h-screen overflow-x-hidden">
-      <section className={`relative overflow-hidden p-14 w-full h-[100vh] flex gap-8 bg-no-repeat bg-cover`} style={{ backgroundImage: `url("/images/${heroThumbnailCombination[heroThumbnailPos - 1].hero}")` }}>
+      <section className={`relative overflow-hidden p-14 w-full h-[100vh] flex gap-8`}>
+        <img
+          src={`/images/${heroThumbnailCombination[heroThumbnailPos - 1].hero}`}
+          alt="Hero"
+          className="absolute z-0 w-full min-w-[1440px] top-0 left-0 h-auto min-h-full"
+        />
         <div className="z-20 bg-transparent flex flex-col items-start justify-end gap-5">
           <Image alt="platforms" src="/platforms.svg" width={163} height={30} />
           <p className="text-xl">Boas vindas ao mundo de</p>
