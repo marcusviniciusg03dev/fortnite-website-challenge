@@ -129,7 +129,7 @@ export default function Home() {
       <Divider />
       <FeaturedSection bgTitle="Créditos" featuredTitle="V-bucks">
         <div className="grid grid-cols-4 gap-5 h-full">
-          <CoinCard imageUrl="/images/image 9.png" price={24.90} quantity={1000} featured />
+          <CoinCard imageUrl="/images/image 9.png" price={24.90} quantity={1000} />
           <CoinCard imageUrl="/images/image 10.png" price={62.50} quantity={2800} />
           <CoinCard imageUrl="/images/image 11.png" price={97.50} quantity={5000} />
           <CoinCard imageUrl="/images/image 12.png" price={246} quantity={13500} bonus={37} />
