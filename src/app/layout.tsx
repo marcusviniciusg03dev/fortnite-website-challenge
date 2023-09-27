@@ -1,7 +1,11 @@
+'use client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Source_Sans_3 } from 'next/font/google'
 import Image from 'next/image'
+import { useState } from 'react'
+
+import { BiMenu, BiX } from 'react-icons/bi'
 
 const sourceSans3 = Source_Sans_3({ subsets: ['latin'] })
 
@@ -15,10 +19,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <html lang="en">
       <body className={sourceSans3.className}>
-          <header className="absolute top-0 left-0 right-0 h-[95px] z-[1000] grid grid-cols-[1fr_70%_1fr] items-center text-center justify-center py-5 border-b-2 border-[#FFFFFF10]">
+        <header className="absolute top-0 left-0 right-0 h-[95px] z-[1000] flex justify-between px-10 xl:px-0 xl:grid xl:grid-cols-[1fr_70%_1fr] items-center text-center xl:justify-center border-b-2 border-[#FFFFFF10]">
           <span>
             <Image
               alt="Fortnite"
@@ -28,18 +34,38 @@ export default function RootLayout({
               className="m-auto"
             />
           </span>
-          <nav className="grid grid-flow-col justify-center gap-7 text-lg">
+          <nav className="hidden md:grid grid-flow-col justify-center gap-7 text-lg">
             <a>Torneios</a>
             <a>Passe de batalha</a>
             <a>V-bucks</a>
             <a>Itens</a>
           </nav>
-          <span>
-            <button className="font-logo text-4xl px-10 py-1 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 transition-all">
+          <span className="flex">
+            <button onClick={() => setIsMenuOpen(prev => !prev)} className="md:hidden p-3 rounded-md bg-grey-900">
+              {!isMenuOpen ? (
+                <BiMenu size={32} />
+              ) : (
+                <BiX size={32} />
+              )}
+            </button>
+            <button className="hidden md:block font-logo text-4xl px-10 py-1 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 transition-all">
               <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Conheça</span>
             </button>
           </span>
         </header>
+        {isMenuOpen && (
+          <aside className="absolute top-[95px] bottom-0 left-0 right-0 md:hidden z-50 shadow-2xl bg-black">
+            <nav className="flex flex-col items-center justify-center text-2xl text-grey-400 gap-10 p-6">
+              <a>Torneios</a>
+              <a>Passe de batalha</a>
+              <a>V-bucks</a>
+              <a>Itens</a>
+              <button className="font-logo text-4xl w-[80%] px-10 py-1 bg-button-hover-bg bg-no-repeat bg-center bg-95% bg-yellow-200 hover:bg-yellow-400 transition-all">
+                <span className="text-gradient bg-gradient-to-b from-[#21294C] to-[#36426C]">Conheça</span>
+              </button>
+            </nav>
+          </aside>
+        )}
         {children}
       </body>
     </html>

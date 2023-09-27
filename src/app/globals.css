@@ -18,12 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #FFF;
 }
 
 @font-face {
@@ -39,6 +34,11 @@ body {
   }
   .text-border-gradient {
     -webkit-background-clip: text;
-    -webkit-text-stroke: .1rem transparent;
+    -webkit-text-stroke: .18rem transparent;
+  }
+  @media screen and (max-width: 900px) {
+    .text-border-gradient {
+      -webkit-text-stroke: .3rem transparent;
+    }
   }
 }
