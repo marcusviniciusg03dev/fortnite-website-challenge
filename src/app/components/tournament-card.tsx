@@ -10,7 +10,7 @@ export default function TournamentCard({ title, imagePath, occurrenceLabel }: To
     return (
         <span className="flex relative items-end justify-center h-[586px]">
             <span className="z-20 absolute w-full h-[50%] bg-gradient-to-t from-[#090D15] to-[#090D1500]" />
-            <Image src={imagePath} alt="" fill className="z-10 absolute bottom-0 mx-auto" />
+            <img src={imagePath} alt={title} className="z-10 absolute bottom-0 mx-auto h-[105%]" />
             <div className="flex justify-center relative bg-gradient-to-t from-[#0866B0] to-[#46CAE9] h-[90%] w-full">
                 <div className="absolute z-40 self-center m-auto text-center -tracking-[-.2em] w-2/3 grid gap-5">
                     <h3 className="text-5xl font-logo uppercase">{title}</h3>
